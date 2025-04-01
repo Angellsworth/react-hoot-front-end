@@ -9,9 +9,9 @@ const CommentForm = (props) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    // add handleAddComment
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.handleAddComment(formData)
     setFormData({ text: '' });
   };
 
